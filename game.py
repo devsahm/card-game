@@ -41,16 +41,18 @@ class Game:
                 continue
 
             choice = ""
-            while player_hand.get_value() < 21 and choice not in [
-                    's', 'stand'
-            ]:
-                choice = input("Please Choose 'hit' or 'stand':").lower
-                print()
+            while player_hand.get_value() < 21 and choice not in [ 's', 'stand']:
 
-                while choice is not ["h", "s", "hit", "stand"]:
-                    choice = input("Please enter Hit or Stand or (H/S):").lower
-                    print()
+                choice = input("Please Choose 'hit' or 'stand': ").lower()
+                print()
+                print(choice)
+
+                # while choice is not ["h", "s", "hit", "stand"]:
+                #     choice = input("Please enter Hit or Stand or (H/S): ").lower()
+                 
+                #     print()
                 if choice in ["hit", "h"]:
+                    print('it is here')
                     player_hand.add_card(deck.deal(1))
                     player_hand.display()
 
